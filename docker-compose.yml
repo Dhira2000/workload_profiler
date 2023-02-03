@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  react-app:
+    build: .
+    image: dhirajlakhane
+    container_name: dhirajlakhaneui
+
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - 3000:3000
+
+    networks:
+      - default
+
+    restart: always
